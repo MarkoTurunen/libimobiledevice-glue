@@ -48,6 +48,7 @@ jobs:
       with:
         name: libimobiledevice-glue-latest_${{env.target_triplet}}
         path: libimobiledevice-glue.tar
+        retention-days: 3
   build-macOS:
     runs-on: macOS-latest
     steps:
@@ -101,6 +102,7 @@ jobs:
       with:
         name: libimobiledevice-glue-latest_macOS
         path: libimobiledevice-glue.tar
+        retention-days: 3
   build-windows:
     runs-on: windows-latest
     defaults:
@@ -164,3 +166,4 @@ jobs:
       with:
         name: libimobiledevice-glue-latest_${{ matrix.arch }}-${{ env.dest }}
         path: libimobiledevice-glue.tar
+        retention-days: 3
